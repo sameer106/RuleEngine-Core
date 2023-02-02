@@ -1,0 +1,14 @@
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\log4net.dll
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\ServiceStack.Common.dll
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\ServiceStack.Interfaces.dll
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\ServiceStack.Logging.Log4Net.dll
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\ServiceStack.OrmLite.dll
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\ServiceStack.OrmLite.SqlServer.dll
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\ServiceStack.Text.dll
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\ServiceStack.Common.xml
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\ServiceStack.Interfaces.xml
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\ServiceStack.Text.xml
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\RuleProviderFactory.Core.dll
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\bin\Debug\RuleProviderFactory.Core.pdb
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\obj\Debug\RuleProviderFactory.Core.dll
+D:\Project\IWP_ReEng\ClaimAPI\ClaimAPI\RuleEngines\Provider.Core\obj\Debug\RuleProviderFactory.Core.pdb

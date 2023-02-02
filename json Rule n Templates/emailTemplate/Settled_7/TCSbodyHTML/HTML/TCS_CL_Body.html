@@ -1,0 +1,21 @@
+Dear Sir/Madam,<br />
+<tr>
+    <td colspan=2>
+        <font>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please find attached Claim settlement letter with respect to Claim number:@Model.ClaimNo for cashless facility provided to @Model.Beneficiary.Name at your hospital
+                for Date of Admission:@Model.DOA and Date of Discharge:@Model.DOD
+            </p><br />
+
+            @if(!Model.Policy.PolPaymentDirect)
+            {
+            <p>Request you to please mark your concurrence with respect to payment for your medical claim. Approved amount of Rs @Model.AmountSettled has been settled with the hospital.If the amount is correct, please mark 'Yes' otherwise mark 'No'. <p />
+            <a href='https://portal.medibuddy.in/Confirmation.aspx?No=@Model.EncryptedClaimNo&Result=Yes&Con=@Model.DBType'>Yes</a>    ||  <a href='https://portal.medibuddy.in/Confirmation.aspx?No=@Model.EncryptedClaimNo&Result=No&Con=@Model.DBType'>No</a><br /><br /></p>
+            }
+
+            <p>
+                Any dispute with regard to the settlement should be communicated within 7 days. The settlement is full and final and the Insurer and Medi Assist Insurance TPA Pvt Ltd. are fully discharged from any liability with respect to the above referred claim.
+            </p><br /><br />
+            Thank You<br />
+            Assuring you of our best services always<br />
+            Medi Assist Insurance TPA Pvt Ltd.<br />

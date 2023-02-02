@@ -1,0 +1,71 @@
+<html>
+<center><img src='http://www.mediassistindia.net/Content/images/logo4PA.gif'></center>
+<body>
+    <p style='width:50%'> @Model.Auditdate.ToString("dd-MM-yy") </p><br>
+    Dear Sir/Mam,
+    <br>
+
+@if (Model.ClaimType == "3" && Model.Policy.PolicyType == 2)
+{
+	Ref:<b><br>       Patient Name :  @Model.Beneficiary.Name<br></b>
+        <b>MAID: @Model.Beneficiary.MAID<br></b>
+        <b>IP No / Bill No: @Model.ClmIPbillNo<br></b> @*-->Sameer*@
+            <b>DOA: @Model.DOA<br></b>
+            <b>DOD: @Model.DOD<br></b>
+            <b>      Emp No: @Model.PriBeneficiary.EmployeeCode</b>
+}
+else if (Model.ClaimType == "3")
+{
+	Ref:<br>      <b>IP No / Bill No: @Model.ClmIPbillNo <br></b>  @*-->sameer*@
+        <b>DOA: @Model.DOA<br></b>
+            <b>DOD: @Model.DOD<br></b>
+}
+
+    <p align='justify'>
+        We confirm the receipt of your @Model.ClaimType claim as per the reference given above.  On scrutiny of the documents submitted by you, the following documents / information would be required for further processing of your claim.  We request you to furnish the following at your earliest convenience:
+    </p>
+    @foreach (var doc in Model.Docs)
+{
+        <li>
+            <b>
+                <u>
+                    @if (doc.DocId == 10)
+                { @doc.Remarks }
+	            else
+                { @doc.DocName }
+                </u>
+            </b>
+        </li>
+}
+
+
+    <p align='justify'>
+        We assure you that on receipt of the above stated information / documents your claim shall be processed expeditiously. Should you require any clarification do call on our Customer Service Helpline.
+        All the above listed documents required to process the claim are to be furnished within 10 days from the date of this letter. It shall be the sole responsibility of the insured to submit the required claim documents.
+    </p>
+
+
+    @if (Model.Policy.CorporateId == 1006205)
+{
+        <p>Please submit the above documents to Access HR Team on below mentioned address for processing the claim and Quote SID, Full Name and Reference No: @Model.ClaimNo in all your future correspondence. In case of any further doubts/queries kindly write to jpmorgan@mediassistindia.com</p><p>AccessHR,<br />J.P. Morgan Services India Pvt. Ltd.<br />Prism Towers, 10th Floor, A-wing,<br />Mindspace, Goregaon West,<br />Mumbai – 400104.</p><br /><br />
+}
+
+@if (Model.IRRemarks!=null && Model.IRRemarks.Length > 10)
+    {<p align='justify'>@Model.IRRemarks<br /><br />Quote our reference No:<b> @Model.ClaimNo</b> in all your future correspondence.</p>}
+else
+    {<p align='justify'><b>Please submit the above documents to the respective branch office Processing the claim and Quote our reference No: @Model.ClaimNo in all your future correspondence.</b></p>}
+Thank you for availing our services and assuring you the best of our services at all times.
+<br><br>
+With Regards,
+<br>
+<table width='100%'>
+    <tr>
+        <td align='left'><b>CUSTOMER SERVICES DEPARTMENT</b></td>
+
+        <td align='right'><font style='font-family:tahoma;font-size:11px'><b>@Guid.NewGuid()</b></font></td>
+    </tr>
+</table>
+MEDI ASSIST INSURANCE PRIVATE LIMITED
+</body>
+</html>
+

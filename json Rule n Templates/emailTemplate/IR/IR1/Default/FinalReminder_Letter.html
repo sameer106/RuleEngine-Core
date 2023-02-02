@@ -1,0 +1,91 @@
+<html>
+<center><img src='http://www.mediassistindia.net/Content/images/logo4PA.gif'></center>
+<body>
+    <p style='width:50%'>@DateTime.Now</p><br>
+    Dear Sir/Mam , <br>
+
+    @if (Model.ClaimType != "3" && Model.Policy.PolicyType == 2)
+    {
+        <br><b>Ref:</b> <b>Emp No : @Model.PriBeneficiary.EmployeeCode</b>
+        <br> <b>Emp Name :  @Model.PriBeneficiary.Name</b>
+        <br> <b>MAID :  @Model.Beneficiary.MAID</b>
+        <br> <b>Policy Holder :  @Model.Policy.PolicyHolderName</b>
+        if (Model.CompanyRefNo != "")
+        {
+            <br><b>  Originating Claim Ref# :@Model.CompanyRefNo</b>
+        }
+    }
+
+    else if (Model.ClaimType == "3" && Model.Policy.PolicyType == 2)
+    {
+        <br><b>Ref:</b><b> Patient   : @Model.Beneficiary.Name</b>
+        <br><b> Emp No   :@Model.PriBeneficiary.EmployeeCode</b>
+        <br> <b>MAID :  @Model.Beneficiary.MAID</b>
+        <br><b> IP No / Bill No   : @Model.ClmIPbillNo</b>
+        <br><b> DOA   :  @Model.DOA</b>
+        <br><b> DOD   :  @Model.DOD</b>
+        <br><b> Policy Holder Name  : @Model.Policy.PolicyHolderName</b>
+    }
+    else
+    {
+        <br><b>Ref:</b><b> Patient   : @Model.Beneficiary.Name</b>
+        <br> <b>MAID :  @Model.Beneficiary.MAID</b>
+        <br><b> IP No / Bill No   : @Model.ClmIPbillNo</b>
+        <br><b> DOA   : @Model.DOA</b>
+        <br><b> DOD   : @Model.DOD</b>
+        <br><b> Policy Holder Name  : @Model.Policy.PolicyHolderName</b>
+
+    }
+    @if (Model.ClmRem1Date != default(DateTime) && Model.ClmRem2Date != default(DateTime))
+    {
+        <p align=justify>
+            Please refer to our earlier letter dated <b>@Model.ClmRem1Date and @Model.ClmRem2Date</b> requesting you to furnish the following information which is required for further processing of given claim
+        </p>
+    }
+    else
+    {
+        <p align=justify>
+            Please refer to our earlier letter dated <b>@Model.ClmRem1Date</b> requesting you to furnish the following information which is required for further processing of given claim
+        </p>
+    }
+    @foreach (var doc in Model.Docs)
+    {
+        <li>
+            <b>
+                <u>
+                    @if (doc.DocId == 10)
+                    { @doc.Remarks }
+                    else
+                    { @doc.DocName }
+                </u>
+            </b>
+        </li>
+    }
+    <p align=justify>
+        We regret to observe that we have not received the same till date.We request you to furnish the information requested within		7 days from the date of this letter, failing which we will be constrained to close your file.Please note that once closed; we will not be in a position to reopen the claim for further process.
+    </p>
+    <p align=justify>
+        We assure you that on receipt of the above stated information / documents your claim shall be processed expeditiously. Should you require any clarification do call on our Customer Service Helpline.
+    </p>
+
+    @if (Model.Policy.CorporateId == 1006205)
+    {
+        <p>Please submit the above documents to Access HR Team on below mentioned address for processing the claim and Quote SID, Full Name and Reference No: @Model.ClaimNo in all your future correspondence. In case of any further doubts/queries kindly write to jpmorgan@mediassistindia.com</p><p>AccessHR,<br />J.P. Morgan Services India Pvt. Ltd.<br />Prism Towers, 10th Floor, A-wing,<br />Mindspace, Goregaon West,<br />Mumbai – 400104.</p><br /><br />
+    }
+
+    <p align='justify'><b>Please Quote our reference No: @Model.ClaimNo in all your future correspondence.</b></p>
+    Thank you for availing our services and assuring you the best of our services at all times.
+    <br><br>
+    With Regards,
+    <br>
+    <table width='100%'>
+        <tr>
+            <td align='left'><b>CUSTOMER SERVICES DEPARTMENT</b></td>
+            <td align='right'><font style='font-family:tahoma;font-size:11px'><b>@Guid.NewGuid()</b></font></td>
+        </tr>
+    </table>
+    Medi Assist Insurance Private Limited<br>
+
+    </font></td></Tr></table>
+</body>
+</html>

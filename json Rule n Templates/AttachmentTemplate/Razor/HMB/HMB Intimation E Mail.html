@@ -1,0 +1,73 @@
+<body bgcolor="#FFFFFF" style="padding:0; margin:0;">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td style="background:#ddd">
+                <table cellpadding="0" cellspacing="0" border="0" width="650" align="center" style="width:650px; margin:0 auto 0 auto">
+                    <tr>
+                        <td style="background:#fff; font-family:Arial, sans-serif; font-size:13px;">
+                            <!-- head wrap - define header css/html here -->
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#fff">
+                                <tr>
+                                    <td style="padding:10px; background:#fff;">
+                                        <a href="https://www.mediassistindia.com/" style="color:#000; text-decoration:none;">
+                                            <img src="medi-assist-logo.png" border="0" width="90" alt="" />
+                                        </a>
+                                    </td>
+                                    <td align="right" style="padding:10px; padding-left:0; background:#fff;"><h2 style="font-size:18px; font-weight:normal;">&nbsp;</h2></td>
+                                </tr>
+                            </table>
+                            <!-- content wrap  - define content css/html here-->
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#fff">
+                                <tr>
+                                    <td style="padding:10px; background:#fff;">
+                                        <p>Date: @Model.Auditdate.ToString("dd-MM-yy")</p>
+                                        <p style="color:#F05A1A; font-size:16px; font-weight:bold; margin-bottom:20px;">Request for Health Maintenance Benefit claim for your CignaTTK @Model.SchemaName policy number @Model.Policy.PolicyNo</p>
+                                        <p><strong>Dear Mr/Ms @Model.Policy.PolicyHolderName</strong></p>
+                                        <p>We acknowledge the receipt of Health Maintenance Benefit claim under the aforesaid policy number, and the same has been registered on @Model.Clmrecdate.</p>
+                                        <p><strong>What are your reimbursement claim registration details?</strong></p>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border:1px solid #ddd; margin-bottom:20px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;"><strong>1. Claim Number:</strong></p></td>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;">@Model.ClaimNo</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="180" style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;"><strong>2. Claim registration date:</strong></p></td>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;">@Model.Clmrecdate</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;"><strong>2. Patient Name:</strong></p></td>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;">@Model.Beneficiary.Name</p></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>Please make a note of your claim number @Model.ClaimNo for all future reference.</p>
+                                        <p>In case of any clarifications, please call our helpline at 1800 123 263 472 or write to us at claims.andhra@mediassistindia.com</p>
+                                        <p>We assure you of our best services at all times.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- footer wrap  - define footer css/html here-->
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding:10px; font-size:14px; font-weight:normal; line-height:18px; color:#333; background:#f2f2f2;">
+                                        <p>Best Regards,</p>
+                                        <p>
+                                            <b>Jyoti Punja,</b><br />
+                                            CignaTTK Health Insurance Company Limited
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding-top:10px; padding-bottom:10px; color:#666; font-size:11px; background:#ddd">This is a system-generated mail, please do not respond to this e-mail Id.</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>

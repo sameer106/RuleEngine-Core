@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\">
+    <title>Claim Details</title>
+</head>
+<body style=\"border-spacing: 0; border-collapse collapse; font-family calibri,helvetica,arial,sans-serif; font-size 14px;\">
+    <p>
+        <u>
+            <b>Claim Number:
+        </u></b>&nbsp;@Model.ClaimNo
+    </p>
+    <p>
+        <u>
+            <b>Patient Name:
+        </u>
+        </b>&nbsp;@Model.Beneficiary.Name
+    </p><p><u><b>Employee Name: </u></b>&nbsp;@Model.PriBeneficiary.Name</p>
+    <p><u><b>Employee Code: </u></b>&nbsp;@Model.PriBeneficiary.EmployeeCode</p>
+    <p><u><b>Entity Code: </u></b>&nbsp;@Model.Beneficiary.AreaCode</p>
+    <p><u><b>VIP Employee: </b></u>&nbsp;@if(Model.Beneficiary.IsVIP)
+                                         { <label>"Yes"</label>}
+                                         else
+                                         {<label>"No"</label>}</p>
+    <p><u><b>UTR Number: </u></b>&nbsp;@Model.PaymentDetails.UTRNo</p>
+    <p><u><b>Payment Amount: </u></b>&nbsp;@Model.AmountSettled</p>
+</body>
+</html>

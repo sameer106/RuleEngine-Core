@@ -1,0 +1,139 @@
+{
+  "type": "object",
+  "properties": {
+    "corpId": {
+      "type": "integer"
+    },
+    "schemeId": {
+      "type": "integer"
+    },
+    "ruleSets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filter": {
+            "type": "object",
+            "properties": {
+              "fromState": {
+                "type": "integer"
+              },
+              "toState": {
+                "type": "integer"
+              },
+              "ruleExpression": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "propertyName": {
+                      "type": "string"
+                    },
+                    "operation": {
+                      "type": "string",
+					  "enum": [
+								"Equal",
+								"NotEqual",
+								"GreaterThan",
+								"GreaterThanOrEqual",
+								"LessThan",
+								"LessThanOrEqual",
+								"IN",
+								"NOTIN"
+							  ]
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "propertyName",
+                    "operation",
+                    "value"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "fromState",
+              "toState",
+              "ruleExpression"
+            ]
+          },
+          "action": {
+            "type": "object",
+            "properties": {
+              "sendEmail": {
+                "type": "boolean"
+              },
+              "toEmailHashSet": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+				  "placeholder": "customertag, hrtag, apprtag"
+                }
+              },
+              "ccEmailHashSet": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "bccEmailHashSet": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "EmailTemplateId": {
+                "type": "integer"
+              },
+              "AttachmentHashSet": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "letterId": {
+                "type": "integer"
+              },
+              "sendSMS": {
+                "type": "boolean"
+              },
+              "contactNoHashSet": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "SmsTemplateId": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "sendEmail",
+              "toEmailHashSet",
+              "ccEmailHashSet",
+              "bccEmailHashSet",
+              "EmailTemplateId",
+              "AttachmentHashSet",
+              "letterId",
+              "sendSMS",
+              "contactNoHashSet",
+              "SmsTemplateId"
+            ]
+          }
+        },
+        "required": [
+          "filter",
+          "action"
+        ]
+      }
+    }
+  },
+  "required": [
+    "corpId",
+    "schemeId",
+    "ruleSets"
+  ]
+}

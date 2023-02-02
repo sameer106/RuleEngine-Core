@@ -1,0 +1,309 @@
+{
+	"corpId": 0,
+	"schemeId": 0,
+	"insCompID": 29,
+	"ruleSets": [{
+		"filter": {
+			"fromState": 0,
+			"toState": 1,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "1"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 20,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 28,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "1"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag",
+			"hospitaltag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 21,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 11
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 9,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "1"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag",
+			"hospitaltag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 22,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 7
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 27,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "1"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag",
+			"hospitaltag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 23,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 9
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 7,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "1"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag",
+			"hospitaltag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 24,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 15
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 19,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "1"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag",
+			"hospitaltag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 26,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 17
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 14,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "2"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 31,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 0
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 28,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "2"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 27,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 25
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 9,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "2"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 28,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 21
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 27,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "2"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 29,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 23
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 2,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "2"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 30,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 19
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 19,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "2"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 32,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 29
+		}
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 7,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "2"
+			}]
+		},
+		"action": {
+			"sendEmail": true,
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": null,
+			"bccEmailHashSet": null,
+			"EmailTemplateId": 33,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": true,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 27
+		}
+	}]
+}

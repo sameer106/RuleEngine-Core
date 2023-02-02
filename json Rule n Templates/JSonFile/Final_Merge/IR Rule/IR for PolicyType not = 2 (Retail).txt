@@ -1,0 +1,1255 @@
+{
+	"corpId": 0,
+	"schemeId": 119,
+	"insCompID": 0,
+	"dbType": "MA",
+	"toState": 9,
+	"ruleSets": [{
+		"filter": {
+			"fromState": 0,
+			"toState": 9,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": false,
+			"letterRequired": true,
+			"EmailTemplateId": 35,
+			"sendSMS": false,
+			
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 9,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": false,
+			"letterRequired": true,
+			"EmailTemplateId": 36,
+			"sendSMS": false,
+			
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 27,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": false,
+			"letterRequired": true,
+			"EmailTemplateId": 39,
+			"sendSMS": false,
+			
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 28,
+			"ruleExpression": [{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": false,
+			"letterRequired": true,
+			"EmailTemplateId": 41,
+			"sendSMS": false,
+			
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 9,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["hospitaltag"],
+			"ccEmailHashSet": ["apprtag",
+			"policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 35,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 9,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["apprtag"],
+			"ccEmailHashSet": ["policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 35,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 9,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyHolderEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["policyholdertag"],
+			"ccEmailHashSet": ["insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 35,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 9,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": ["apprtag",
+			"policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 36,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 9,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["apprtag"],
+			"ccEmailHashSet": ["policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 36,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 9,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyHolderEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["policyholdertag"],
+			"ccEmailHashSet": ["insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 36,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 27,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": ["apprtag",
+			"policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 39,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 27,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["hospitaltag"],
+			"ccEmailHashSet": ["apprtag",
+			"policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 39,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 27,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["apprtag"],
+			"ccEmailHashSet": ["policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 39,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 27,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyHolderEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["policyholdertag"],
+			"ccEmailHashSet": ["insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 39,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 27,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": ["apprtag",
+			"policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 39,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 27,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["apprtag"],
+			"ccEmailHashSet": ["policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 39,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 27,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyHolderEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["policyholdertag"],
+			"ccEmailHashSet": ["insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 39,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 28,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["hospitaltag"],
+			"ccEmailHashSet": ["apprtag",
+			"policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 41,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 28,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["apprtag"],
+			"ccEmailHashSet": ["policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 41,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 28,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "IN",
+				"value": "3,11"
+			},
+			{
+				"propertyName": "HospitalEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyHolderEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["policyholdertag"],
+			"ccEmailHashSet": ["insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 41,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 28,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["customertag"],
+			"ccEmailHashSet": ["apprtag",
+			"policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 41,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 28,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["apprtag"],
+			"ccEmailHashSet": ["policyholdertag",
+			"insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 41,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	},
+	{
+		"filter": {
+			"fromState": 0,
+			"toState": 28,
+			"ruleExpression": [{
+				"propertyName": "PolicyId",
+				"operation": "NOTIN",
+				"value": "IProvider.usp_ircommunicationexclusion"
+			},
+			{
+				"propertyName": "ClaimType",
+				"operation": "NOTIN",
+				"value": "12,1,3,11"
+			},
+			{
+				"propertyName": "CustomerEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "ApprEmail",
+				"operation": "Equal",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyHolderEmail",
+				"operation": "NotEqual",
+				"value": null
+			},
+			{
+				"propertyName": "PolicyTypeId",
+				"operation": "Equal",
+				"value": "2"
+			},
+			{
+				"propertyName": "ClaimIsLocked",
+				"operation": "NotEqual",
+				"value": "1"
+			},
+			{
+				"propertyName": "InsCompId",
+				"operation": "NotEqual",
+				"value": "29"
+			}]
+		},
+		"action": [{
+			"sendEmail": true,
+			"fromEmailId": "IProvider.usp_getfromemailid",
+			"toEmailHashSet": ["policyholdertag"],
+			"ccEmailHashSet": ["insofftag"],
+			"bccEmailHashSet": ["cmsemailtracking@mediassistindia.com"],
+			"EmailTemplateId": 41,
+			"AttachmentHashSet": null,
+			"letterId": 0,
+			"sendSMS": false,
+			"contactNoHashSet": ["customertag"],
+			"SmsTemplateId": 4
+		}]
+	}]
+}

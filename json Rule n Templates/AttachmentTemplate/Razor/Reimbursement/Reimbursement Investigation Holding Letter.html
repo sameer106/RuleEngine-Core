@@ -1,0 +1,97 @@
+
+<body bgcolor="#FFFFFF" style="padding:0; margin:0;">
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td style="background:#ddd">
+                <table cellpadding="0" cellspacing="0" border="0" width="650" align="center" style="width:650px; margin:0 auto 0 auto">
+                    <tr>
+                        <td style="background:#fff; font-family:Arial, sans-serif; font-size:13px;">
+                            <!-- head wrap - define header css/html here -->
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#fff">
+                                <tr>
+                                    <td style="padding:10px; background:#fff;">
+                                        <a href="https://www.mediassistindia.com/" style="color:#000; text-decoration:none;">
+                                            <img src="medi-assist-logo.png" border="0" width="90" alt="" />
+                                        </a>
+                                    </td>
+                                    <td align="right" style="padding:10px; padding-left:0; background:#fff;"><h2 style="font-size:18px; font-weight:normal;"> </h2></td>
+                                </tr>
+                            </table>
+                            <!-- content wrap  - define content css/html here-->
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#fff">
+                                <tr>
+                                    <td style="padding:10px; background:#fff;">
+                                        <p>Date: @Model.Auditdate.ToString("dd-MM-yy")</p>
+                                        <p style="color:#F05A1A; font-size:16px; font-weight:bold; margin-bottom:20px;">Request for Reimbursement claim for your CignaTTK @Model.SchemaName policy number @Model.Policy.PolicyNo</p>
+                                        <p><strong>Dear Mr/Ms @Model.Policy.PolicyHolderName</strong></p>
+                                        <p>We acknowledge the receipt of documents. We at Cigna TTK Health Insurance understand that claims settlement is the ultimate service, which we can offer to our customers. Our Claims philosophy is designed keeping this in mind.</p>
+                                        <p><strong>What are the claim registration details?</strong></p>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border:1px solid #ddd; margin-bottom:20px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="180" style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;"><strong>1. Claim Number:</strong></p></td>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;">@Model.ClaimNo</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;"><strong>2. Patient Name:</strong></p></td>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;">@Model.Beneficiary.Name</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;"><strong>3. Hospital Name:</strong></p></td>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;">@Model.Hospital.Name</p></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;"><strong>4. Hospital Address:</strong></p></td>
+                                                    <td style="padding:5px; border:1px solid #eee;">
+                                                        <p style="margin:0; padding:0;">
+                                                            @{
+                                                                if (string.IsNullOrEmpty(Model.Hospital.Address.Address1))
+                                                                {<span>@Model.Hospital.Address.Address1</span>}
+                                                                if (string.IsNullOrEmpty(Model.Hospital.Address.Address2))
+                                                                {<span>, @Model.Hospital.Address.Address2</span>}
+                                                                if (string.IsNullOrEmpty(Model.Hospital.Address.City))
+                                                                {<span>, @Model.Hospital.Address.City</span>}
+                                                                if (string.IsNullOrEmpty(Model.Hospital.Address.PinCode))
+                                                                {<span>- @Model.Hospital.Address.PinCode</span> }
+                                                            }
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;"><strong>5. Ailment for which admitted:</strong></p></td>
+                                                    <td style="padding:5px; border:1px solid #eee;"><p style="margin:0; padding:0;">@Model.AilmentName</p></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>We would like to inform that your claim is under verification and for completing the verification, the Insurance Regulatory and Development Authority allows a period of 6 months from receipt of the written claim intimation by the Company.</p>
+                                        <p>We are eager to close this decision and will revert to you in case of any further clarifications or once a decision is taken on this claim.</p>
+                                        <p>Kindly bear with us in the meanwhile.</p>
+                                        <p>Should you need any clarification, please contact us on 1800 123 263 472 or write to us at claims.andhra@mediassistindia.com</p>
+                                        <p>We assure you of our best services at all times.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- footer wrap  - define footer css/html here-->
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding:10px; font-size:14px; font-weight:normal; line-height:18px; color:#333; background:#f2f2f2;">
+                                        <p>Best Regards,</p>
+                                        <p>
+                                            <b>Jyoti Punja,</b><br />
+                                            CignaTTK Health Insurance Company Limited
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                <tr>
+                                    <td style="padding-top:10px; padding-bottom:10px; color:#666; font-size:11px; background:#ddd">This is a system-generated mail, please do not respond to this e-mail Id.</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
